@@ -1,0 +1,32 @@
+﻿
+<html>
+<head>
+	<title>Kişileri Getir</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+	<h2>
+
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Ad Soyad</th>
+					<th>Doğum Tarihi</th>
+				</tr>
+			</thead>
+
+
+			@foreach(var item in Model)
+			{
+				<tr>
+					<td>@item.Id</td>
+					<td>@item.Ad @item.Soyad</td>
+					<td>@item.DogumTarihi.ToShortDateString()</td>
+				</tr>
+				<hr />
+			}
+		</table>
+	</h2>
+	</body>
+</html>

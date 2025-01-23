@@ -1,0 +1,69 @@
+﻿@model IEnumerable<_02_HttpGetPost.Models.Personel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <h2>
+        @ViewBag.MesajBilgi
+    </h2>
+    <h2>
+        @TempData["Bildirim"]
+    </h2>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    @if(TempData["basariMesaji"] is not null)
+    {
+        <div class="alert alert-info">
+            <h2>
+                @TempData["basariMesaji"]
+            </h2>
+        </div>
+    }
+    <div></div>
+<div class="alert alert-danger">
+    <h2> @ViewBag.Bilgi</h2>
+    <h2> @TempData["info"]</h2>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sifre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sifre)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

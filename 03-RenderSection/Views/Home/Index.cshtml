@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center deneme">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@section Stil{
+    <style>
+        .deneme{
+            color:darkgoldenrod;
+            background-color:bisque;
+        }
+    </style>
+}
+@section linkler{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GirisSayfasi">Giriş Yap</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="KayitSayfasi">Kayıt Ol</a>
+    </li>
+}
+<!-- home index açıldığında navbarda kayıt ol ve giriş yap linkleri gözüksün. ama home-privacy açıldığında sadece çıkış yap gözüksün->

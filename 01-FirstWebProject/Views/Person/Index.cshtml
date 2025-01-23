@@ -1,0 +1,33 @@
+﻿@model List<Person>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> @item.FirstName @item.LastName</h5>
+                    <p class="card-text">ID: @item.Id Yaş:@item.Age Ad:@item.FirstName Soyad:@item.LastName</p>
+                    <p>Arabalar:</p>
+                    @foreach(var car in item.Cars)
+                    {
+                        <a asp-action="Detail" asp-controller="Person" class="btn btn-outline-info">@car.Brand @car.Model</a>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

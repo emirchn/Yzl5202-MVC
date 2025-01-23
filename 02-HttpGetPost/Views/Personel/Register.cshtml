@@ -1,0 +1,21 @@
+﻿@model Personel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+<form method="post">
+    Mail: <input type="text" asp-for="Mail"/>
+    Şifre: <input type="text" asp-for="Sifre"/>
+    <input type="submit" class="btn btn-outline-dark" />
+</form>
+</body>
+</html>

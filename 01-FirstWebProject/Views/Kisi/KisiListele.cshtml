@@ -1,0 +1,29 @@
+﻿@model List<Kisi>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>KisiListele</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> @item.Ad @item.Soyad</h5>
+                    <p class="card-text">@item.Id bilgisine sahip kişi hakkında daha fazla bilgi almak isterseniz aşağıdaki butona tıklayınız.</p>
+                    <a href="#" class="btn btn-outline-info">Detay İçin Tıkla</a>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

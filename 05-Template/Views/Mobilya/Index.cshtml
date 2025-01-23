@@ -1,0 +1,144 @@
+﻿@model List<Mobilya>
+
+<!-- furniture section -->  
+<section class="furniture_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Our Furniture
+            </h2>
+            <p>
+                which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't an
+            </p>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="img-box">                          
+                                <img src="~/template/images/f1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                @item.Ad
+                            </h5>
+                            <div class="price_box">
+                                <h6 class="price_heading">
+                                    <span>$</span>@item.Fiyat
+                                    <span style="margin-left:20px">Hammadde:</span> @item.HamMadde
+                                </h6>
+                                <a class="btn btn-info" href="/Mobilya/Detay/@item.Id">
+                                    Detay
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @* <div class="col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="~/template/images/f2.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Double Bed Design
+                            </h5>
+                            <div class="price_box">
+                                <h6 class="price_heading">
+                                    <span>$</span> 200.00
+                                </h6>
+                                <a href="">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="~/template/images/f3.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                House Chair Design
+                            </h5>
+                            <div class="price_box">
+                                <h6 class="price_heading">
+                                    <span>$</span> 200.00
+                                </h6>
+                                <a href="">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="~/template/images/f4.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                brown Table Design
+                            </h5>
+                            <div class="price_box">
+                                <h6 class="price_heading">
+                                    <span>$</span> 100.00
+                                </h6>
+                                <a href="">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="~/template/images/f5.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Blue Chair Design
+                            </h5>
+                            <div class="price_box">
+                                <h6 class="price_heading">
+                                    <span>$</span> 200.00
+                                </h6>
+                                <a href="">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="box">
+                    <div class="img-box">
+                        <img src="~/template/images/f6.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Brown Table Design
+                        </h5>
+                        <div class="price_box">
+                            <h6 class="price_heading">
+                                <span>$</span> 200.00
+                            </h6>
+                            <a href="">
+                                Buy Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             *@
+        </div>
+    </div>
+</section>
+
+<!-- end furniture section -->
