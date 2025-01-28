@@ -1,0 +1,38 @@
+﻿@model _07_CodeFirstDoktor.Models.VMs.DoktorGuncelleVM
+<div>
+@TempData["sonuc"]
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Doktor Güncelle</h2>
+			@if (TempData["sonuc"] != null)
+			{
+				<div class="alert alert-success">
+					@TempData["sonuc"]
+				</div>
+			}
+			</div>
+	</div>
+	<form asp-action="Guncelle" method="post">
+		<div style="margin:4px" class="form-group">
+			Ad: <input type="text" asp-for="Isim">
+		</div>
+		<div style="margin:4px" class="form-group">
+			Soyad: <input type="text" asp-for="Soyisim">
+		</div>
+		<div style="margin:4px" class="form-group">
+			Branş: <input type="text" asp-for="Brans">
+		</div>
+		<div style="margin:4px" class="form-group">
+			Doğum Tarihi: <input type="date" asp-for="DogumTarihi">
+		</div>
+		<div style="margin:4px" class="form-group">
+			Email: <input type="email" asp-for="Mail">
+		</div>
+		<div class="form-group">
+		<input type="hidden" asp-for="Id" />
+		</div>
+		<input style="margin:4px" type="submit" value="Güncelle" class="btn btn-outline-primary" />
+	</form>
+</div>

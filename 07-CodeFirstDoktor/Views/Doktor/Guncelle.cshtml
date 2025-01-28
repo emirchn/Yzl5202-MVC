@@ -1,0 +1,11 @@
+﻿@model Doktor
+<div class="row">
+	<form method="post" asp-action="Guncelle">
+		Ad: <input type="text" asp-for="Ad" />
+		Soyad: <input type="text" asp-for="Soyad" />
+		Email: <input type="text" asp-for="Email" />
+		Brans: <input type="text" asp-for="Brans" />
+		Doğum Tarihi: <input type="date" asp-for="DogumTarihi" />
+		<input type="hidden" asp-for="Id" />
+		<input type="submit" value="Güncelle" class="btn btn-dark" />
+	</form>

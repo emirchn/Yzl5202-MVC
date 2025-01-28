@@ -1,0 +1,42 @@
+﻿@model List<Doktor>
+
+	@if(TempData["mesaj"] is not null){
+	@if (TempData["mesaj"] as string == "Doktor ekleme işlemi başarılı")
+	{
+		<div class="alert alert-success">Doktor ekleme işlemi başarılı</div>
+	}
+	else if (TempData["mesaj"] as string == "Doktor ekleme işlemi başarısız")
+	{
+		<div class="alert alert-danger">Doktor ekleme işlemi başarısız</div>
+	}
+}
+	
+	<p>
+		<a class="btn btn-success" href="/Doktor/DoktorEkle">Doktor Ekle</a>
+	</p>
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Ad</th>
+				<th>Soyad</th>
+				<th>Brans</th>
+			</tr>
+		</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.Ad</td>
+				<td>@item.Soyad</td>
+				<td>@item.Brans</td>
+				<td>
+					<a class="btn btn-danger" href="/Doktor/Sil/@item.Id">Sil</a>-
+					<a class="btn btn-dark" href="/Doktor/Guncelle/@item.Id">Güncelle</a>-
+					<a class="btn btn-light" href="/Doktor/Detay/@item.Id">Detay</a>
+				</td>
+			</tr>
+		}
+	</table>

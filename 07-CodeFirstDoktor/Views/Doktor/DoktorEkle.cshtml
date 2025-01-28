@@ -1,0 +1,12 @@
+﻿@model Doktor
+<div class="row">
+		<div class="col-md-8">
+		<form asp-action="DoktorEkle" method="post">
+			Doktor Ad: <input type="text" asp-for="Ad" />
+			Doktor Soyad: <input type="text" asp-for="Soyad" />
+			Doktor Email: <input type="email" asp-for="Email" />
+			Doktor Branş: <input type="text" asp-for="Brans" />
+			Doktor Doğum Tarihi: <input type="date" asp-for="DogumTarihi" />
+			<input type="submit" value="Doktor Ekle" class="btn btn-outline-success" />
+		</form>
+</div>
